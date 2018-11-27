@@ -1,0 +1,1 @@
+/home/chimanos/Documents/Workspace IntellIJ/cars-commerce/ejb/build/classes/kotlin/main/cars/dao/impl/CarDAOImpl.class:/home/chimanos/Documents/Workspace IntellIJ/cars-commerce/ejb/build/classes/kotlin/main/cars/dao/manager/CarDAO.class:/home/chimanos/Documents/Workspace IntellIJ/cars-commerce/ejb/build/classes/kotlin/main/cars/entity/Car.class

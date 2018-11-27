@@ -1,0 +1,2 @@
+include ':ejb'
+project(':ejb').projectDir = new File(settingsDir, '../ejb')

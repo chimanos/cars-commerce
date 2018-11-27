@@ -1,0 +1,17 @@
+group 'cars-commerce'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'ear'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    deploy project(path: ':ejb', configuration: 'archives')
+    deploy project(path: ':war', configuration: 'archives')
+
+    earlib group: 'log4j', name: 'log4j', version: '1.2.15', ext: 'jar'
+    earlib group: 'org.hibernate.ogm', name: 'hibernate-ogm-mongodb', version: '5.4.0.Final', ext: 'jar'
+}
