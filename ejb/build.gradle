@@ -1,8 +1,22 @@
-plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.2.71'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.10"
+    }
 }
 
+/*plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.10'
+}*/
+
 apply plugin: 'java'
+apply plugin: 'kotlin'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 sourceCompatibility = 1.8
 
@@ -11,10 +25,23 @@ repositories {
     jcenter()
 }
 
+jar {
+    from {
+        String[] include = [
+                "kotlin-runtime-1.3.10.jar",
+                "kotlin-stdlib-1.3.10.jar"
+        ]
+
+        configurations.compile
+                .findAll { include.contains(it.name) }
+                .collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.0.CR1'
     compile 'javax:javaee-api:7.0'
-    compileOnly 'org.hibernate.ogm:hibernate-ogm-mongodb:5.4.0.Final'
 }
 
 compileKotlin {

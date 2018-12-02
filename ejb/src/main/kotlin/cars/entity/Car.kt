@@ -3,14 +3,16 @@ package cars.entity
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
+import javax.persistence.Table
 
 @Entity
+@Table(name="Car")
 class Car(
         @Id
         @GeneratedValue(generator = "uuid")
-        val id: String,
-        val name: String,
-        val brand: String,
-        val color: String,
-        val nbPorte: String,
-        val price: String)
+        var id: Int?,
+        var name: String,
+        var brand: String,
+        var color: String,
+        var nbPorte: String,
+        var price: String)

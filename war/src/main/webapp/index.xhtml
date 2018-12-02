@@ -15,8 +15,6 @@
         <h:panelGrid columns="2" styleClass="tablestyle">
             <h:outputText value="Hibernate OGM example on WildFly" />
             <br/>
-            <h:outputText value="Enter id:" />
-            <h:inputText value="#{carController.id}" />
 
             <h:outputText value="Enter name:" />
             <h:inputText value="#{carController.name}" />
@@ -35,11 +33,7 @@
 
             <h:commandButton actionListener="#{carController.addCar}"
                              value="Save key/value" />
-
-
             <h:messages />
-
-
         </h:panelGrid>
     </h:form>
 </h:body>
