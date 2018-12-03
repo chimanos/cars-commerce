@@ -15,4 +15,5 @@ class Car(
         var brand: String,
         var color: String,
         var nbPorte: String,
+        var pictureUrl: String,
         var price: String)

@@ -1,7 +1,7 @@
-package cars.dao.impl
+package user.dao.impl
 
-import cars.dao.manager.CarDAO
-import cars.entity.Car
+import user.dao.manager.UserDAO
+import user.entity.User
 import javax.ejb.Stateless
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
@@ -9,20 +9,20 @@ import javax.transaction.Transactional
 
 @Stateless
 @Transactional
-open class CarDAOImpl : CarDAO {
+class UserDAOImpl : UserDAO {
 
     @PersistenceContext(unitName="persistenceUnit")
     private lateinit var entityManager: EntityManager
 
-    override fun addCar(car: Car) {
-        entityManager.persist(car)
+    override fun addUser(user: User) {
+        entityManager.persist(user)
     }
 
-    override fun getCars(): List<Car> {
+    override fun getUsers(): List<User> {
 
     }
 
-    override fun getCar(id: String): Car {
+    override fun getUser(id: String): User {
 
     }
 }
