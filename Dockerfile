@@ -2,9 +2,21 @@ FROM jboss/wildfly
 
 RUN /opt/jboss/wildfly/bin/add-user.sh root root --silent
 
-#ADD build/libs/cars-commerce-1.0-SNAPSHOT.ear /opt/jboss/wildfly/standalone/deployments/
-ADD postgresql-42.2.5.jre6.jar /opt/jboss/wildfly/standalone/deployments/
+USER root
 
-RUN sed -n '/default-bindings/!p' wildfly/standalone/configuration/standalone.xml
+# CONFIG JBOSS SERVER WITH H2
+ADD standalone.xml  /opt/jboss/wildfly/standalone/configuration/standalone.xml
 
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
+# RUNTIME
+ADD run.sh run.sh
+RUN chmod +x run.sh
+
+USER jboss
+
+ADD build/libs/cars-commerce-1.0-SNAPSHOT.ear /opt/jboss/wildfly/standalone/deployments/
+
+EXPOSE 8080
+EXPOSE 9990
+EXPOSE 8082
+
+CMD ["./run.sh"]

@@ -22,7 +22,7 @@ class CarController {
     lateinit var price: String
 
     init {
-        //resetValue()
+        resetValue()
     }
 
     fun addCar() {
