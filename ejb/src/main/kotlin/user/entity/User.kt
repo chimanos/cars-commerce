@@ -6,7 +6,7 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name="User")
+@Table(name="Users")
 class User(@Id
            @GeneratedValue(generator = "uuid")
            var id: Int?,

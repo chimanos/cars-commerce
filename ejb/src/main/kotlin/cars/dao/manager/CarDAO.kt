@@ -6,7 +6,8 @@ import javax.ejb.LocalBean
 
 @LocalBean
 interface CarDAO {
-//    fun getCars(): List<Car>
-//    fun getCar(id: String): Car
+    fun getCars(): List<Car>
+    fun getCarById(id: Int): Car
+    fun getCarByName(name: String): Car
     fun addCar(car: Car)
 }
