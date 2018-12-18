@@ -35,24 +35,24 @@ class CarController {
         resetValue()
     }
 
-    fun getBerlines(): String {
+    fun getCarsHtml(type: String): String {
         var htmlResult = ""
 
-        carDAO.getCarsByType(CarType.BERLINE).forEach {
-            htmlResult = htmlResult + getBerlinesStatic(it)
+        carDAO.getCarsByType(type).forEach {
+            htmlResult = htmlResult + getCarHtml(it)
         }
 
         return htmlResult
     }
 
-    private fun getBerlinesStatic(berlin: Car): String {
-        return "<article id=\"${berlin.id}\">" +
+    private fun getCarHtml(car: Car): String {
+        return "<article id=\"${car.id}\" style=\"background-image: url('${car.pictureUrl}'); background-size: cover;\">" +
                 "<div class=\"overlay\">" +
-                "<h3 class=\"nomVoiture\"><span class=\"orange\">${berlin.brand}</span> ${berlin.nameCar}</h3>" +
-                "<p class=\"descriptionVoiture\">${berlin.description}</p>" +
+                "<h3 class=\"nomVoiture\"><span class=\"orange\">${car.brand}</span> ${car.nameCar}</h3>" +
+                "<p class=\"descriptionVoiture\">${car.description}</p>" +
                 "</div>" +
                 "<div id=\"posBoutonInfos\">" +
-                "<a href=\"#\" class=\"buttonInfos\">Acheter</a>" +
+                "<a href=\"#\" class=\"buttonInfos\">Acheter ${car.price}€</a>" +
                 "</div>" +
                 "</article>"
     }

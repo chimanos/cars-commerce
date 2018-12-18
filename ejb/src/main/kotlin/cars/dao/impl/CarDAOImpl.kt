@@ -20,8 +20,8 @@ open class CarDAOImpl : CarDAO {
         return query.getResultList() as List<Car>
     }
 
-    override fun getCarsByType(type: CarType): List<Car> {
-        val query = entityManager.createQuery("SELECT car FROM Car car WHERE carType = '${type.name}' ORDER BY id")
+    override fun getCarsByType(type: String): List<Car> {
+        val query = entityManager.createQuery("SELECT car FROM Car car WHERE carType = '${type}' ORDER BY id")
         return query.getResultList() as List<Car>
     }
 

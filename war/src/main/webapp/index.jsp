@@ -49,7 +49,7 @@
 				<p class="titre">Nos Berlines</p>
 
 				<div id="listeVoiture">
-					${carController.getBerlines()}
+					${carController.getCarsHtml("BERLINE")}
 				</div>
 			</div>
 
@@ -57,33 +57,7 @@
 				<p class="titre">Nos SUV</p>
 
 				<div id="listeVoiture">
-					<article id="suv1">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">Tesla</span> Model X</h3>
-							<p class="descriptionVoiture">La Tesla Model 3 est une berline électrique, simple et abordable.</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>
-					<article id="suv2">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">BMW</span> X6</h3>
-							<p class="descriptionVoiture">Prenez les rênes : la BMW X6 est faite pour ceux qui aiment le mouvement.</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>	
-					<article id="suv3">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">AUDI</span> Q8</h3>
-							<p class="descriptionVoiture">La Audi Q8 adopte un tempérament de baroudeur.</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>
+					${carController.getCarsHtml("SUV")}
 				</div>
 			</div>
 
@@ -91,33 +65,7 @@
 				<p class="titre">Nos Sportives</p>
 
 				<div id="listeVoiture">
-					<article id="sport1">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">Tesla</span> Model S</h3>
-							<p class="descriptionVoiture">La Model S a été conçue pour être la berline la plus sûre et la plus exaltante</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>
-					<article id="sport2">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">PORSCHE</span> 718 Cayman GTS</h3>
-							<p class="descriptionVoiture">La BMW X6 est faite pour ceux qui aiment le mouvement.</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>	
-					<article id="sport3">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">BMW</span> M4</h3>
-							<p class="descriptionVoiture">La nouvelle BMW M4 CS est un modèle spécial haute performances</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>
+					${carController.getCarsHtml("SPORTIVE")}
 				</div>
 			</div>
 		</section>

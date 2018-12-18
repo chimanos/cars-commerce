@@ -143,42 +143,6 @@ header nav {
 	margin-bottom: 1%;
 }
 
-#berline1 {
-	background-image: url(../images/berlines/teslamodel3.png);
-}
-
-#berline2 {
-	background-image: url(../images/berlines/508.png);
-}
-
-#berline3 {
-	background-image: url(../images/berlines/classeC.png);
-}
-
-#suv1 {
-	background-image: url(../images/suv/modelX.png);
-}
-
-#suv2 {
-	background-image: url(../images/suv/x6.png);
-}
-
-#suv3 {
-	background-image: url(../images/suv/audiq8.png);
-}
-
-#sport1 {
-	background-image: url(../images/sportives/modelS.png);
-}
-
-#sport2 {
-	background-image: url(../images/sportives/cayman.png);
-}
-
-#sport3 {
-	background-image: url(../images/sportives/m4.png);
-}
-
 article {
 	width: 550px;
 	height: 350px;
