@@ -1,0 +1,201 @@
+/* Général */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	color: #444;
+}
+
+li {
+	color: #444;
+}
+
+ul {
+	list-style: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	width: 80%;
+	margin: 0 10%;
+}
+
+p {
+	color: #444;
+}
+
+#listeVoiture {
+	padding: 0;
+  	margin: 0;
+	display: flex;
+	justify-content: space-around;
+	 display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+ 	-webkit-flex-flow: row wrap;
+}
+
+/* Header */
+
+.logoMenu {
+	display: flex;
+	justify-content: space-around; 
+}
+
+#voituresMenu:hover , #userMenu:hover {
+	color: orange;
+	text-shadow: 0px 0px 1px orange;
+}
+
+header h1 {
+	margin: 25px 0px 25px 40px;
+	font-size: 2.5em
+}
+
+header li {
+	text-decoration: none;
+}
+
+header a {
+	text-decoration: none;
+	color: #262626;
+}
+
+header nav ul li {
+	display: inline-block;
+	margin-left: 40px;
+	font-size: 1.9em;
+
+}
+
+header nav {
+	margin-top: 30px;
+}
+
+.orange {
+	color: orange;
+}
+
+#sousMenu {
+	display: flex;
+	justify-content: center;
+}
+
+.typeOfCar:hover {
+	background-color: #FF8F35;
+}
+
+.typeOfCar {
+	margin: 0px 10px 20px 0px;
+	display: flex;
+	font-weight: bold;
+	font-size: 1em;
+	background-color: orange;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+
+/* PRECARS */
+
+.dropdown:hover > #cart-dropdown{
+  display: block;
+}
+
+#preP {
+	font-size: 2em;
+	margin: 2% 0 2% 0%;
+}
+
+#preCars {
+	display: flex;
+	justify-content: space-around;
+}
+
+.dropdown p{
+	font-size: 2em;
+	margin: 0.3% 0 2% 0%;
+}
+
+/*Section voiture*/
+
+.emplacement {
+	margin:auto;
+}
+
+#berlines {
+	background-color: #efefef;
+}
+
+.titre {
+	text-align: center;
+	padding-top: 2%;
+	text-transform: uppercase;
+	font-size: 2em;
+	margin-bottom: 1%;
+}
+
+article {
+	width: 550px;
+	height: 350px;
+	margin: 20px auto;
+	border-radius: 10px;
+}
+
+article p {
+	font-size: 1em;
+}
+
+.overlay {
+	background: rgba(255, 255, 255, 0.95);
+	height: 26%;
+	width: 100%;
+	padding: 3px;
+	border-radius: 10px 10px 0px 0px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+article h3 {
+	text-transform: uppercase;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 8px;
+	text-align: center;
+}
+
+.buttonInfos {
+	color: white;
+	background-color: orange;
+	border-radius: 15px;
+	padding: 1.3% 3.5%;
+	text-decoration: none;
+}
+
+#posBoutonInfos {
+	padding-top: 220px;
+	padding-left: 40%;
+}
+
+.buttonInfos:hover {
+	box-shadow: 0px 0px 0px 1px orange;
+	background-color: #FF8F35;
+}
+
+#sportive {
+	background-color : #efefef;
+}
+
+
+/* Footer */
+
+footer {
+	margin: 50px;
+}

@@ -1,14 +1,15 @@
 package cars.dao.manager
 
 import cars.entity.Car
-import javax.ejb.Local
+import cars.entity.CarType
 import javax.ejb.LocalBean
-import javax.ejb.Remote
-import javax.ejb.Stateless
+
 
 @LocalBean
 interface CarDAO {
-    //fun getCars(): List<Car>
-    //fun getCar(id: String)
+    fun getCars(): List<Car>
+    fun getCarsByType(type: String): List<Car>
+    fun getCarById(id: Int): Car
+    fun getCarByName(name: String): Car
     fun addCar(car: Car)
 }

@@ -5,7 +5,10 @@ RUN /opt/jboss/wildfly/bin/add-user.sh root root --silent
 USER root
 
 # CONFIG JBOSS SERVER WITH H2
-ADD standalone.xml  /opt/jboss/wildfly/standalone/configuration/standalone.xml
+ADD standalone.xml /opt/jboss/wildfly/standalone/configuration/standalone.xml
+
+# ADD SQL SCRIPT FOR ADD BASE DATA
+ADD script.sql script.sql
 
 # RUNTIME
 ADD run.sh run.sh
