@@ -49,33 +49,7 @@
 				<p class="titre">Nos Berlines</p>
 
 				<div id="listeVoiture">
-					<article id="berline1">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">Tesla</span> Model 3 ${carController.name()}</h3>
-							<p class="descriptionVoiture">La Tesla Model 3 est une berline électrique, simple et abordable.</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>
-					<article id="berline2">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">Peugeot</span> 508</h3>
-							<p class="descriptionVoiture">La 508 dispose d'un extérieur plus affirmé et un contenu technologique renforcé.</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>	
-					<article id="berline3">
-						<div class="overlay">
-							<h3 class="nomVoiture"><span class="orange">Mercedes</span> Classe C</h3>
-							<p class="descriptionVoiture">La Nouvelle Classe C est prête à prendre le départ.</p>
-						</div>
-						<div id="posBoutonInfos">
-							<a href="#" class="buttonInfos">Plus d'infos</a>
-						</div>
-					</article>
+					${carController.getBerlines()}
 				</div>
 			</div>
 

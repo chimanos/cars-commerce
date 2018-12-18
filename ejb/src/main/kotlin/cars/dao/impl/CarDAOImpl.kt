@@ -2,6 +2,7 @@ package cars.dao.impl
 
 import cars.dao.manager.CarDAO
 import cars.entity.Car
+import cars.entity.CarType
 import javax.ejb.Stateless
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
@@ -15,7 +16,12 @@ open class CarDAOImpl : CarDAO {
     private lateinit var entityManager: EntityManager
 
     override fun getCars(): List<Car> {
-        val query = entityManager.createQuery("SELECT * FROM Car ORDER BY id")
+        val query = entityManager.createQuery("SELECT car FROM Car car ORDER BY id")
+        return query.getResultList() as List<Car>
+    }
+
+    override fun getCarsByType(type: CarType): List<Car> {
+        val query = entityManager.createQuery("SELECT car FROM Car car WHERE carType = '${type.name}' ORDER BY id")
         return query.getResultList() as List<Car>
     }
 
