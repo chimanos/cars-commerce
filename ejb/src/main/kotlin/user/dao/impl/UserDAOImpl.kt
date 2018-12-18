@@ -9,7 +9,7 @@ import javax.transaction.Transactional
 
 @Stateless
 @Transactional
-class UserDAOImpl : UserDAO {
+open class UserDAOImpl : UserDAO {
 
     @PersistenceContext(unitName="persistenceUnit")
     private lateinit var entityManager: EntityManager
@@ -18,11 +18,11 @@ class UserDAOImpl : UserDAO {
         entityManager.persist(user)
     }
 
-    override fun getUsers(): List<User> {
-
-    }
-
-    override fun getUser(id: String): User {
-
-    }
+//    override fun getUsers(): List<User> {
+//
+//    }
+//
+//    override fun getUser(id: String): User {
+//
+//    }
 }

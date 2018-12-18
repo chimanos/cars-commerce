@@ -19,6 +19,7 @@ class CarController {
     lateinit var brand: String
     lateinit var color: String
     lateinit var nbPorte: String
+    lateinit var pictureUrl: String
     lateinit var price: String
 
     init {
@@ -26,10 +27,12 @@ class CarController {
     }
 
     fun addCar() {
-        val car = Car(null, name, brand, color, nbPorte, price)
+        val car = Car(null, name, brand, color, nbPorte, pictureUrl, price)
         carDAO.addCar(car)
         resetValue()
     }
+
+    fun name() = "Bonjour Bonjour"
 
     private fun resetValue() {
         name = ""
@@ -39,3 +42,4 @@ class CarController {
         price = ""
     }
 }
+

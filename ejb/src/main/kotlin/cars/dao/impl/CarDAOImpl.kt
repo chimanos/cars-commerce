@@ -18,11 +18,11 @@ open class CarDAOImpl : CarDAO {
         entityManager.persist(car)
     }
 
-    override fun getCars(): List<Car> {
-
-    }
-
-    override fun getCar(id: String): Car {
-
-    }
+//    override fun getCars(): List<Car> {
+//
+//    }
+//
+//    override fun getCar(id: String): Car {
+//
+//    }
 }
