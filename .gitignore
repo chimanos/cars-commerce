@@ -1,5 +1,9 @@
 .gradle
 /build/
+/ejb/build/
+/ejb/out/
+/war/out/
+/war/build/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
