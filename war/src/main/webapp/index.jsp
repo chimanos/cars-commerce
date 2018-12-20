@@ -68,6 +68,43 @@
 					${carController.getCarsHtml("SPORTIVE")}
 				</div>
 			</div>
+
+			<div class="emplacement" id="user">
+				<p class="titre">Utilisateur</p>
+
+				<div id="userAction">
+					<article id="connexion">
+						<h3 class="userDiv"><span class="orange">C</span>onnexion</h3>
+						<form class="userP" action="/action_page.php">
+							<p>Pseudo:</p>
+							<input type="text" name="pseudo"><br>
+							<p>Mot de Passe:</p>
+							<input type="password" name="password"><br>
+							<div id="posUserButton">
+								<input class="userButton" type="submit" value="Connexion">
+							</div>
+						</form>
+					</article>
+					<article id="inscription">
+						<h3 class="userDiv"><span class="orange">I</span>nscription</h3>
+						<form class="userP" action="/action_page.php">
+							<p>Pseudo:</p>
+							<input type="text" name="pseudo"><br>
+							<p>Email:</p>
+							<input type="text" name="email"><br>
+							<p>Nom:</p>
+							<input type="text" name="nom"><br>
+							<p>Prénom:</p>
+							<input type="text" name="prenom"><br>
+							<p>Mot de Passe:</p>
+							<input type="password" name="password"><br>
+							<div id="posUserButton">
+								<input class="userButton" type="submit" value="Inscription">
+							</div>
+						</form>
+					</article>
+				</div>
+			</div>
 		</section>
 
 		<footer>

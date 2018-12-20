@@ -4,7 +4,6 @@ import cars.entity.Car
 import cars.entity.CarType
 import javax.ejb.LocalBean
 
-
 @LocalBean
 interface CarDAO {
     fun getCars(): List<Car>
