@@ -2,6 +2,7 @@ package cars.controller
 
 import cars.dao.manager.CarDAO
 import cars.entity.Car
+import money.service.manager.MoneyConverterService
 import javax.enterprise.context.Dependent
 import javax.enterprise.inject.Model
 import javax.inject.Inject
@@ -12,6 +13,9 @@ class CarController {
 
     @Inject
     private lateinit var carDAO: CarDAO
+
+    @Inject
+    private lateinit var moneyConverterService: MoneyConverterService
 
     lateinit var name: String
     lateinit var description: String
@@ -49,7 +53,7 @@ class CarController {
                 "<p class=\"descriptionVoiture\">${car.description}</p>" +
                 "</div>" +
                 "<div id=\"posBoutonInfos\">" +
-                "<a href=\"#\" class=\"buttonInfos\">Acheter ${car.price}€</a>" +
+                "<a href=\"#\" class=\"buttonInfos\">Acheter ${car.price}€ / ${moneyConverterService.convertEuroToDollars(car.price)}$</a>" +
                 "</div>" +
                 "</article>"
     }

@@ -11,11 +11,9 @@ import okhttp3.RequestBody
 import okhttp3.logging.HttpLoggingInterceptor
 import java.io.IOException
 import javax.ejb.Stateless
-import javax.transaction.Transactional
 
 @Stateless
-@Transactional
-class MoneyConverterServiceImpl: MoneyConverterService {
+open class MoneyConverterServiceImpl : MoneyConverterService {
 
     private val okHttpClient: OkHttpClient
     private val gson: Gson
@@ -40,14 +38,15 @@ class MoneyConverterServiceImpl: MoneyConverterService {
         moneyRate = getRateFromAmazonLambda().rate
     }
 
+
+    @Throws(IOException::class)
+    override fun convertEuroToDollars(euro: String): String {
+        return "${Integer.parseInt(euro)*moneyRate}"
+    }
+
     /**
      * curl -X POST -H "Content-Type:application/json" -H "token:Y8qBV2pLZm5Ho4grdHFXE1rhCaqmtXbJ26q4JBLY" --data '{"base":"USD", "target":"EUR"}' https://pvfsds8nk9.execute-api.eu-west-3.amazonaws.com/prod
      */
-    @Throws(IOException::class)
-    override fun convertEuroToDollars(euro: String): String {
-
-    }
-
     private fun getRateFromAmazonLambda(): MoneyResponse {
         val money = MoneyBody(MoneyBody.MoneyType.EUR.name, MoneyBody.MoneyType.USD.name)
         val body = RequestBody.create(MEDIA_JSON, gson.toJson(money))
@@ -56,7 +55,7 @@ class MoneyConverterServiceImpl: MoneyConverterService {
 
         if (!response.isSuccessful) throw IOException("Unexpected code $response")
 
-        return response.body()!!.string()
+        return gson.fromJson(response.body()!!.string(), MoneyResponse::class.java)
     }
 
     private fun getBaseRequest(): Request.Builder {
