@@ -9,6 +9,8 @@ import javax.inject.Inject
 @Dependent
 class UserController {
 
+
+
     lateinit var pseudo: String
     lateinit var firstName: String
     lateinit var lastName: String
