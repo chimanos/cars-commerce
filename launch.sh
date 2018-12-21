@@ -10,4 +10,4 @@ docker container rm cars-commerce
 docker build --no-cache -t cars-commerce:1.0.0 .
 
 #Launch Docker image
-docker run -p 8080:8080 -p 9990:9990 -p 8082:8082 --name cars-commerce cars-commerce:1.0.0
+docker run -t -i -p 8080:8080 -p 9990:9990 -p 8082:8082 --name cars-commerce cars-commerce:1.0.0

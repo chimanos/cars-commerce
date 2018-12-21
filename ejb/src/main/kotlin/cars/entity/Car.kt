@@ -19,10 +19,11 @@ class Car {
     var carType: String = ""
     var pictureUrl: String = ""
     var price: String = ""
+    var stock: Int = -1
 
     constructor()
 
-    constructor(id: Int?, nameCar: String, description: String, brand: String, color: String, nbPorte: String, carType: String, pictureUrl: String, price: String) {
+    constructor(id: Int?, nameCar: String, description: String, brand: String, color: String, nbPorte: String, carType: String, pictureUrl: String, price: String, stock: Int) {
         this.id = id
         this.nameCar = nameCar
         this.description = description
@@ -32,9 +33,10 @@ class Car {
         this.carType = carType
         this.pictureUrl = pictureUrl
         this.price = price
+        this.stock = stock
     }
 
     override fun toString(): String {
-        return "Car(id=$id, nameCar='$nameCar', description='$description', brand='$brand', color='$color', nbPorte='$nbPorte', carType='$carType', pictureUrl='$pictureUrl', price='$price')"
+        return "Car(id=$id, nameCar='$nameCar', description='$description', brand='$brand', color='$color', nbPorte='$nbPorte', carType='$carType', pictureUrl='$pictureUrl', price='$price', stock='$stock')"
     }
 }

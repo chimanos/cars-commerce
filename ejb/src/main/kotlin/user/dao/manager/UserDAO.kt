@@ -7,6 +7,6 @@ import javax.ejb.LocalBean
 interface UserDAO {
     fun getUsers(): List<Users>
     fun getUserById(id: Int): Users
-    fun getUserByPseudo(pseudo: String): Users
+    fun getUserByPseudo(pseudo: String): Users?
     fun addUser(users: Users)
 }
