@@ -15,14 +15,14 @@ open class CarDAOImpl : CarDAO {
     @PersistenceContext(unitName="persistenceUnit")
     private lateinit var entityManager: EntityManager
 
-    override fun getCars(): List<Car> {
+    override fun getCars(): ArrayList<Car> {
         val query = entityManager.createQuery("SELECT car FROM Car car ORDER BY id")
-        return query.getResultList() as List<Car>
+        return query.getResultList() as ArrayList<Car>
     }
 
-    override fun getCarsByType(type: String): List<Car> {
+    override fun getCarsByType(type: String): ArrayList<Car> {
         val query = entityManager.createQuery("SELECT car FROM Car car WHERE carType = '${type}' ORDER BY id")
-        return query.getResultList() as List<Car>
+        return query.getResultList() as ArrayList<Car>
     }
 
     override fun getCarById(id: Int) = entityManager.find(Car::class.java, id)

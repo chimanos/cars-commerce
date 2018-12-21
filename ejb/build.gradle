@@ -38,6 +38,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.0.CR1'
     compile 'javax:javaee-api:7.0'
+    compile 'com.squareup.okhttp3:okhttp:3.12.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile "com.google.code.gson:gson:2.7"
 }
 
 compileKotlin {

@@ -68,6 +68,65 @@
 					${carController.getCarsHtml("SPORTIVE")}
 				</div>
 			</div>
+
+			<div class="emplacement" id="user">
+				<p class="titre">Utilisateur</p>
+
+				<div id="userAction">
+					<article id="connexion">
+						<h3 class="userDiv"><span class="orange">C</span>onnexion</h3>
+						<form class="userP" action="/action_page.php">
+							<p>Pseudo:</p>
+							<input type="text" name="pseudo"><br>
+							<p>Mot de Passe:</p>
+							<input type="password" name="password"><br>
+							<div id="posUserButton">
+								<input class="userButton" type="submit" value="Connexion">
+							</div>
+						</form>
+					</article>
+					<article id="inscription">
+						<h3 class="userDiv"><span class="orange">I</span>nscription</h3>
+						<form class="userP" action="/action_page.php">
+							<p>Pseudo:</p>
+							<input type="text" name="pseudo"><br>
+							<p>Email:</p>
+							<input type="text" name="email"><br>
+							<p>Nom:</p>
+							<input type="text" name="name"><br>
+							<p>Prénom:</p>
+							<input type="text" name="firstname"><br>
+							<p>Mot de Passe:</p>
+							<input type="password" name="password"><br>
+							<div id="posUserButton">
+								<input class="userButton" type="submit" value="Inscription">
+							</div>
+						</form>
+					</article>
+				</div>
+				<div id="userInfo">
+					<article id="info">
+						<h3 class="userDiv"><span class="orange">I</span>nformations</h3>
+						<p>Pseudo: <span id="userPseudo">userPseudo</span></p>
+						<p>Email:<span id="userEmail">userEmail</span></p>
+						<p>Nom:<span id="userLastname">userLastname</span></p>
+						<p>Prénom:<span id="userFirstname">userFirstname</span></p>
+						<p>Historique des commandes:</p>
+						<table id="orderHistory" style="width:100%">
+							<tr>
+								<th>Modèle</th>
+								<th>Quantité</th>
+								<th>Prix</th>
+							</tr>
+							<tr>
+								<td>car.carName</td>
+								<td>quantity</td>
+								<td>quantity*car.price</td>
+							</tr>
+						</table>
+					</article>
+				</div>
+			</div>
 		</section>
 
 		<footer>

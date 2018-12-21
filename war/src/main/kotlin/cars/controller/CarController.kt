@@ -1,10 +1,7 @@
 package cars.controller
 
-import cars.dao.impl.CarDAOImpl
 import cars.dao.manager.CarDAO
 import cars.entity.Car
-import cars.entity.CarType
-import javax.ejb.EJB
 import javax.enterprise.context.Dependent
 import javax.enterprise.inject.Model
 import javax.inject.Inject
