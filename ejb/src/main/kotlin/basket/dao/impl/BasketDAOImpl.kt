@@ -2,7 +2,9 @@ package basket.dao.impl
 
 import basket.dao.manager.BasketDAO
 import basket.entity.Basket
+import cars.entity.Car
 import global.extention.toOrders
+import user.entity.Users
 import javax.ejb.Stateless
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
@@ -29,4 +31,9 @@ open class BasketDAOImpl: BasketDAO {
     }
 
     override fun basketToOrder(basket: Basket) = basket.toOrders()
+
+    override fun addToBasket(car: Car, user: Users, qtt: Int) {
+        val basket = Basket(user.id, user.id, car.id, qtt)
+        entityManager.persist(basket)
+    }
 }

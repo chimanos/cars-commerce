@@ -48,5 +48,11 @@ INSERT INTO Car VALUES(10, 'M4', 'La nouvelle BMW M4 CS est un modèle spécial 
 
 INSERT INTO Users VALUES(1, 'test', 'Romain', 'Pamart', 'romain.pamart@uphf.fr', 'test');
 
+INSERT INTO Basket VALUES(1, 1, 1, 1);
+
+INSERT INTO Orders VALUES(1, 1, 4, 1);
+INSERT INTO Orders VALUES(2, 1, 8, 1);
+INSERT INTO Orders VALUES(3, 1, 1, 1);
+
 SELECT * FROM Car ORDER BY id;
 SELECT * FROM Users ORDER BY id;
