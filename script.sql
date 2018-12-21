@@ -10,7 +10,7 @@ CREATE TABLE Car(id INT,
                  carType VARCHAR(255),
                  pictureUrl VARCHAR(255),
                  price VARCHAR(255),
-                 stock INTEGER,
+                 stock INT,
                  PRIMARY KEY (id, nameCar));
 
 CREATE TABLE Users(id INT,
@@ -20,6 +20,18 @@ CREATE TABLE Users(id INT,
                    email VARCHAR(255),
                    password VARCHAR(255),
                    PRIMARY KEY (id, pseudo));
+
+CREATE TABLE Orders(id INT,
+                   userId INT,
+                   carId INT,
+                   stock INT,
+                   PRIMARY KEY (id, userId));
+
+CREATE TABLE Basket(id INT,
+                    userId INT,
+                    carId INT,
+                    stock INT,
+                    PRIMARY KEY (id, userId));
 
 INSERT INTO Car VALUES(1, 'Model 3', 'La Tesla Model 3 est une berline électrique, simple et abordable.', 'Tesla', 'Rouge', '5', 'BERLINE', 'http://image.noelshack.com/fichiers/2018/51/2/1545155777-teslamodel3.jpg', '35000', 3);
 INSERT INTO Car VALUES(2, '508 3', 'La 508 dispose d''un extérieur plus affirmé et un contenu technologique renforcé.', 'Peugeot', 'Bleu', '5', 'BERLINE', 'http://image.noelshack.com/fichiers/2018/51/2/1545155853-508.jpg', '38000', 3);

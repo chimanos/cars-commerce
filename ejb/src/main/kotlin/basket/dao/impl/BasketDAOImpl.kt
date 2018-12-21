@@ -2,9 +2,7 @@ package basket.dao.impl
 
 import basket.dao.manager.BasketDAO
 import basket.entity.Basket
-import cars.entity.Car
-import global.extention.toOrder
-import org.hibernate.criterion.Order
+import global.extention.toOrders
 import javax.ejb.Stateless
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
@@ -30,5 +28,5 @@ open class BasketDAOImpl: BasketDAO {
         return null
     }
 
-    override fun basketToOrder(basket: Basket) = basket.toOrder()
+    override fun basketToOrder(basket: Basket) = basket.toOrders()
 }

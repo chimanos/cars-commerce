@@ -1,10 +1,10 @@
 package order.dao.manager
 
-import order.entity.Order
+import order.entity.Orders
 import javax.ejb.LocalBean
 
 @LocalBean
 interface OrderDAO {
-    fun addOrder(order: Order)
-    fun getOrdersOfUser(userId: Int): List<Order>
+    fun addOrder(order: Orders)
+    fun getOrdersOfUser(userId: Int): List<Orders>
 }

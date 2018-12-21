@@ -6,8 +6,8 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name="Order")
-class Order {
+@Table(name="Orders")
+class Orders {
     @Id
     @GeneratedValue(generator = "uuid")
     var id: Int? = null

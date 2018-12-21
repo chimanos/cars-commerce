@@ -1,6 +1,6 @@
 package global.extention
 
 import basket.entity.Basket
-import order.entity.Order
+import order.entity.Orders
 
-fun Basket.toOrder(): Order = Order(null, this.userId, this.carId, this.stock)
+fun Basket.toOrders(): Orders = Orders(null, this.userId, this.carId, this.stock)
