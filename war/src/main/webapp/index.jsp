@@ -108,9 +108,9 @@
 					<article id="info">
 						<h3 class="userDiv"><span class="orange">I</span>nformations</h3>
 						<p>Pseudo: <span id="userPseudo">userPseudo</span></p>
-						<p>Email:<span id="userEmail">userEmail</span></p>
-						<p>Nom:<span id="userLastname">userLastname</span></p>
-						<p>Prénom:<span id="userFirstname">userFirstname</span></p>
+						<p>Email: <span id="userEmail">userEmail</span></p>
+						<p>Nom: <span id="userLastname">userLastname</span></p>
+						<p>Prénom: <span id="userFirstname">userFirstname</span></p>
 						<p>Historique des commandes:</p>
 						<table id="orderHistory" style="width:100%">
 							<tr>
@@ -122,6 +122,24 @@
 								<td>car.carName</td>
 								<td>quantity</td>
 								<td>quantity*car.price</td>
+							</tr>
+						</table>
+						<p>Panier:</p>
+						<table id="cartTable" style="width:100%">
+							<tr>
+								<th>Modèle</th>
+								<th>Quantité</th>
+								<th>Prix</th>
+							</tr>
+							<tr>
+								<td>car.carName</td>
+								<td>quantity</td>
+								<td>quantity*car.price</td>
+							</tr>
+							<tr class="table-footer">
+								<td></td>
+								<td>Total</td>
+								<td id="cartTotal">100</td>
 							</tr>
 						</table>
 					</article>
