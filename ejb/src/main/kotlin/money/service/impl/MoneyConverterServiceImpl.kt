@@ -18,7 +18,7 @@ open class MoneyConverterServiceImpl : MoneyConverterService {
     private val okHttpClient: OkHttpClient
     private val gson: Gson
 
-    private val moneyRate: Long
+    private val moneyRate: Double
 
     companion object {
         val MEDIA_JSON = MediaType.parse("application/json; charset=utf-8")
@@ -41,7 +41,7 @@ open class MoneyConverterServiceImpl : MoneyConverterService {
 
     @Throws(IOException::class)
     override fun convertEuroToDollars(euro: String): String {
-        return "${Integer.parseInt(euro)*moneyRate}"
+        return "${(Integer.parseInt(euro) * moneyRate).toInt()}"
     }
 
     /**

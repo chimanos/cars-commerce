@@ -108,7 +108,7 @@
 		</section>
 
 		<footer>
-			<div class="copyright">Copyright 2018. Tous droits réservés - Romain Pamart/Maxime Devallez - M2 TNSI FA</div>
+			<div class="copyright">Copyright 2018. Tous droits réservés - Romain Pamart/Maxime Devallez/Petit Maxime/Berrez Florent - M2 TNSI FA</div>
 		</footer>
 	</body>
 </html>
